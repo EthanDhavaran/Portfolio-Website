@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #161513;
+  color: white;
+  font-family: 'Outfit', sans-serif;
+}
+
+.section {
+  background: linear-gradient(270deg, #2ecc71, #7f8c8d); /* for example */
+  padding: 40px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}

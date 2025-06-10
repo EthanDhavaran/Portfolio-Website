@@ -1,0 +1,220 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+
+.about-title {
+    position: relative;
+}
+
+.about-title h1 {
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+    color: white;
+}
+
+.about-title img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+.about-para {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    color: white;
+}
+
+.about-skill:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.about-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.about-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    color: white;
+}
+
+.about-skill p {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.skill-bar-container {
+    width: 100%;
+    height: 10px;
+    background: #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-bar-fill {
+    height: 100%;
+    background: linear-gradient(246deg, #2ecc71 -5%, #7f8c8d 106%);
+    border-radius: 5px 0 0 5px;
+    transition: width 0.4s ease;
+}
+
+.about-hobbies {
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+}
+
+.about-hobbies h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.hobby-card {
+    perspective: 1000px;
+}
+
+.hobby-card-inner {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.hobby-card:hover .hobby-card-inner {
+    transform: rotateY(180deg);
+}
+
+.hobby-card-front,
+.hobby-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hobby-card-front {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hobby-card-back {
+    transform: rotateY(180deg);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+  max-width: 450px;
+}
+
+.about-description {
+  flex: 1;
+  font-size: 20px;
+  line-height: 1.6;
+  color: white;
+  max-width: none;
+}
+
+.about-description p{
+    margin-bottom: 60px;
+}
+
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .hobby-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: space-between;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.coding-skills,
+.soft-skills {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+}
+
+.coding-skills h2,
+.soft-skills h2 {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.top-section {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.about-hobbies, .about-description {
+  flex: 1;
+}
